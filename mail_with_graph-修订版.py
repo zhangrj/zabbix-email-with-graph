@@ -1,14 +1,12 @@
 #!/usr/bin/python
 # coding:utf-8
-# author: itnihao
-# mail: itnihao#qq.com
-# url: https://github.com/zabbix-book/zabbix_mail_with_graph
+# author:zhangrongjie
+# website:http://icoder.top/
+# url:https://github.com/zhangrj/zabbix-email-with-graph/
 
 from pyzabbix import ZabbixAPI
 import os
 import argparse
-import logging
-import datetime
 import requests
 import tempfile
 import re
