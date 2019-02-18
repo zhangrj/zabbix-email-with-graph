@@ -3,6 +3,13 @@
 # author:zhangrongjie
 # website:http://icoder.top/
 # url:https://github.com/zhangrj/zabbix-email-with-graph/
+#
+# import needed modules.
+# pyzabbix is needed, see https://github.com/lukecyca/pyzabbix
+# 
+# software sendEmail-v1.56 is also needed, see the github. 
+# because my company's email server doesn't support python's email module
+# you can also change the code and replace it with pure python. It depends.
 
 from pyzabbix import ZabbixAPI
 import os
