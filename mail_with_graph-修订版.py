@@ -161,7 +161,6 @@ if __name__ == "__main__":
         html_img = '''<br/><img src="data:image/png;base64,''' + img_base64 + '''">'''
         content += html_img
 	with open('/usr/lib/zabbix/alertscripts/email.html','w') as content_txt:
-	    content_txt.truncate()
 	    content_txt.write(content)
         os.system("/usr/local/bin/sendEmail -f "+ smtp_user + 
             " -t " + receiver + " -s " + smtp_server + " -u " + subject + 
