@@ -150,7 +150,7 @@ if __name__ == "__main__":
     #send mail
     if img == "ERROR":
         os.system("/usr/local/bin/sendEmail -f "+ smtp_user + 
-            " -t " + receiver + " -s " + smtp_server + " -u " + subject + 
+            " -t " + receiver + " -s " + smtp_server + ":" + smtp_port + " -u " + subject + 
             " -o message-content-type=html -o message-charset=utf-8 -xu " + 
             smtp_user + " -xp "+ smtp_pwd + " -m " + content) 
     else:
@@ -163,6 +163,6 @@ if __name__ == "__main__":
 	with open('/usr/lib/zabbix/alertscripts/email.html','w') as content_txt:
 	    content_txt.write(content)
         os.system("/usr/local/bin/sendEmail -f "+ smtp_user + 
-            " -t " + receiver + " -s " + smtp_server + " -u " + subject + 
+            " -t " + receiver + " -s " + smtp_server + ":" + smtp_port + " -u " + subject + 
             " -o message-content-type=html -o message-charset=utf-8 -xu " + 
             smtp_user + " -xp "+ smtp_pwd + " -o message-file=/usr/lib/zabbix/alertscripts/email.html") 
